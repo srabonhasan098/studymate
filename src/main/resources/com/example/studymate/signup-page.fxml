@@ -11,7 +11,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #f7f4f2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.signUpController">
     <children>
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="723.0" layoutY="80.0" prefHeight="88.0" prefWidth="386.0" text="STUDY MATE" textFill="#f68b1e">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="731.0" layoutY="86.0" prefHeight="88.0" prefWidth="386.0" text="STUDY MATE" textFill="#f68b1e">
             <font>
                 <Font name="System Bold" size="60.0" />
             </font>
@@ -21,12 +21,12 @@
             <Image url="@yoyo2.jpg" />
          </image>
         </ImageView>
-        <TextField layoutX="767.0" layoutY="266.0" prefHeight="41.0" prefWidth="314.0" promptText="Student ID" style="-fx-border-color: #f68b1e;" />
-        <TextField layoutX="767.0" layoutY="338.0" prefHeight="41.0" prefWidth="314.0" promptText="Email" style="-fx-border-color: #f68b1e;" />
+        <TextField fx:id="jStudentId" layoutX="767.0" layoutY="266.0" prefHeight="41.0" prefWidth="314.0" promptText="Student ID" style="-fx-border-color: #f68b1e;" />
+        <TextField fx:id="jEmail" layoutX="767.0" layoutY="338.0" prefHeight="41.0" prefWidth="314.0" promptText="Email" style="-fx-border-color: #f68b1e;" />
         <Button fx:id="signupButton" layoutX="838.0" layoutY="482.0" mnemonicParsing="false" onAction="#setSignupButtonClick" prefHeight="39.0" prefWidth="173.0" style="-fx-background-color: #f68b1e; -fx-background-radius: 5;" text="Sign Up" textFill="WHITE" />
         <Label layoutX="821.0" layoutY="544.0" prefHeight="27.0" prefWidth="142.0" text="Already have an account?" />
-      <PasswordField layoutX="767.0" layoutY="407.0" prefHeight="41.0" prefWidth="314.0" promptText="Password" style="-fx-border-color: #f68b1e;" />
-      <TextField layoutX="767.0" layoutY="197.0" prefHeight="41.0" prefWidth="314.0" promptText="Name" style="-fx-border-color: #f68b1e;" />
+      <PasswordField fx:id="jPassword" layoutX="767.0" layoutY="407.0" prefHeight="41.0" prefWidth="314.0" promptText="Password" style="-fx-border-color: #f68b1e;" />
+      <TextField fx:id="jName" layoutX="767.0" layoutY="197.0" prefHeight="41.0" prefWidth="314.0" promptText="Name" style="-fx-border-color: #f68b1e;" />
       <Button fx:id="loginButton" layoutX="970.0" layoutY="545.0" mnemonicParsing="false" onAction="#setLoginButtonClick" style="-fx-background-color: #2d2a87;" text="Login" textFill="WHITE" />
     </children>
 </Pane>
