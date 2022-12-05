@@ -28,7 +28,7 @@ public class LogInController {
 
     @FXML
     protected void setSignupButtonClick(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("login-page.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("signup-page.fxml"));
         Scene signupScene = new Scene(parent);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.setScene(signupScene);

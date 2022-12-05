@@ -18,12 +18,12 @@
       </Label>
       <ImageView fitHeight="720.0" fitWidth="630.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@yoyo2.jpg" />
+            <Image url="@Images/yoyo2.jpg" />
          </image>
       </ImageView>
       <TextField fx:id="jStudentId" layoutX="772.0" layoutY="269.0" prefHeight="39.0" prefWidth="301.0" promptText="Student ID" style="-fx-border-color: #f68b1e;" />
       <Button fx:id="btnLogin" layoutX="836.0" layoutY="406.0" mnemonicParsing="false" onAction="#Login" prefHeight="39.0" prefWidth="173.0" style="-fx-background-color: #f68b1e;" text="Login" textFill="WHITE" />
-      <Label layoutX="824.0" layoutY="498.0" prefHeight="27.0" prefWidth="173.0" text="Don't have an account!!!" />
+      <Label layoutX="779.0" layoutY="503.0" prefHeight="27.0" prefWidth="173.0" text="Don't have an account!!!" />
       <PasswordField fx:id="jPassword" layoutX="772.0" layoutY="341.0" prefHeight="39.0" prefWidth="301.0" promptText="Password" style="-fx-border-color: #f68b1e;" />
       <Button fx:id="signButton" layoutX="963.0" layoutY="499.0" mnemonicParsing="false" onAction="#setSignupButtonClick" style="-fx-background-color: #2d2a87; -fx-text-fill: #fff;" text="Sign Up" />
    </children>

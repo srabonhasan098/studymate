@@ -18,7 +18,7 @@
                <children>
                   <ImageView fitHeight="125.0" fitWidth="185.0" layoutX="35.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-content-radius: 5;">
                      <image>
-                        <Image url="@girl3.jpg" />
+                        <Image url="@Images/HighResGirl.jpg" />
                      </image>
                   </ImageView>
                </children>
@@ -30,16 +30,16 @@
             </Label>
             <Label fx:id="jUserId" layoutX="103.0" layoutY="236.0" style="-fx-text-fill: black;" text="0111231150" textFill="#e1e1e1" />
             <Button fx:id="btnProfile" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" onAction="#goToBtnProfile" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
-            <Button layoutX="31.0" layoutY="339.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
-            <Button layoutX="31.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
-            <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
+            <Button fx:id="btnMates" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" onAction="#goToBtnMates" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
+            <Button fx:id="btnSearch" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#goToBtnSearch" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
+            <Button fx:id="btnLogout" layoutX="27.0" layoutY="652.0" mnemonicParsing="false" onAction="#goToBtnLogout" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="522.0" layoutY="54.0" prefHeight="581.0" prefWidth="413.0" style="-fx-background-color: #fea57f; -fx-background-radius: 5;">
          <children>
             <ImageView fitHeight="485.0" fitWidth="413.0" pickOnBounds="true">
                <image>
-                  <Image url="@student.jpg" />
+                  <Image url="@Images/student.jpg" />
                </image>
                <effect>
                   <BoxBlur />

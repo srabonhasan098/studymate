@@ -146,4 +146,28 @@ public class HomePageController implements Initializable{
         appStage.setScene(signupScene);
         appStage.show();
     }
+
+    public void goToBtnMates(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("mates-page.fxml"));
+        Scene signupScene = new Scene(parent);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(signupScene);
+        appStage.show();
+    }
+
+    public void goToBtnSearch(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("search-page.fxml"));
+        Scene signupScene = new Scene(parent);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(signupScene);
+        appStage.show();
+    }
+
+    public void goToBtnLogout(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("signup-page.fxml"));
+        Scene signupScene = new Scene(parent);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(signupScene);
+        appStage.show();
+    }
 }
