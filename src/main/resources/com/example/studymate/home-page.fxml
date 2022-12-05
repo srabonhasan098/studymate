@@ -18,7 +18,7 @@
                <children>
                   <ImageView fitHeight="125.0" fitWidth="185.0" layoutX="35.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-content-radius: 5;">
                      <image>
-                        <Image url="@../../../../../../../../../Desktop/girl.jpg" />
+                        <Image url="@girl3.jpg" />
                      </image>
                   </ImageView>
                </children>
@@ -39,7 +39,7 @@
          <children>
             <ImageView fitHeight="485.0" fitWidth="413.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../../../../../../Desktop/student.jpg" />
+                  <Image url="@student.jpg" />
                </image>
                <effect>
                   <BoxBlur />

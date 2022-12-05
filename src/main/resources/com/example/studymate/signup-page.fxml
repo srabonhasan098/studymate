@@ -9,17 +9,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #f7f4f2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.signUpController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #f7f4f2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.signUpController">
     <children>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="723.0" layoutY="80.0" prefHeight="88.0" prefWidth="386.0" text="STUDY MATE" textFill="#f68b1e">
             <font>
                 <Font name="System Bold" size="60.0" />
             </font>
         </Label>
-        <ImageView fitHeight="720.0" fitWidth="630.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../../../../../../../Desktop/yoyo2.jpg" />
-            </image>
+        <ImageView fitHeight="720.0" fitWidth="630.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@yoyo2.jpg" />
+         </image>
         </ImageView>
         <TextField layoutX="767.0" layoutY="266.0" prefHeight="41.0" prefWidth="314.0" promptText="Student ID" style="-fx-border-color: #f68b1e;" />
         <TextField layoutX="767.0" layoutY="338.0" prefHeight="41.0" prefWidth="314.0" promptText="Email" style="-fx-border-color: #f68b1e;" />

@@ -18,7 +18,7 @@
       </Label>
       <ImageView fitHeight="720.0" fitWidth="630.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../Desktop/yoyo2.jpg" />
+            <Image url="@yoyo2.jpg" />
          </image>
       </ImageView>
       <TextField layoutX="772.0" layoutY="269.0" prefHeight="39.0" prefWidth="301.0" promptText="Student ID" style="-fx-border-color: #f68b1e;" />
