@@ -31,6 +31,7 @@
                 <Button layoutX="31.0" layoutY="339.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
                 <Button layoutX="31.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
                 <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
+            <Button layoutX="31.0" layoutY="445.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
             </children>
         </AnchorPane>
           <AnchorPane layoutX="336.0" layoutY="50.0" prefHeight="108.0" prefWidth="837.0" style="-fx-background-color: #f68b20#f68b20; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;">

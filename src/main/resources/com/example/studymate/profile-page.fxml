@@ -37,6 +37,7 @@
                 <Button layoutX="31.0" layoutY="339.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
                 <Button layoutX="31.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
                 <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
+            <Button layoutX="33.0" layoutY="447.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
             </children>
         </AnchorPane>
         <AnchorPane layoutX="521.0" layoutY="34.0" prefHeight="647.0" prefWidth="236.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;">
@@ -140,11 +141,6 @@
                </graphic>
             </Label>
             <Text layoutX="173.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Structer, AI" />
-            <ImageView fitHeight="36.0" fitWidth="16.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/icons8-helping-50.png" />
-               </image>
-            </ImageView>
             </children>
         </AnchorPane>
     </children>
