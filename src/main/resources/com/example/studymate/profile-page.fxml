@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#switchToLoginPage" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.ProfilePageController">
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="289.0" style="-fx-background-color: #f68b20#f68b20;">
             <children>
@@ -27,17 +26,27 @@
                         </ImageView>
                     </children>
                 </Pane>
-                <Label fx:id="jUserName" layoutX="70.0" layoutY="201.0" style="-fx-text-fill: black;" text="Amanda Clare" textFill="WHITE">
+                <Label fx:id="jUserName" alignment="CENTER" layoutX="35.0" layoutY="201.0" prefHeight="35.0" prefWidth="229.0" style="-fx-text-fill: black;" text="Amanda Clare" textFill="WHITE">
                     <font>
-                        <Font size="24.0" />
+                        <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <Label fx:id="jUserId" layoutX="103.0" layoutY="236.0" style="-fx-text-fill: black;" text="0111231150" textFill="#e1e1e1" />
-                <Button layoutX="31.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
-                <Button layoutX="31.0" layoutY="339.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
-                <Button layoutX="31.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
-                <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
-            <Button layoutX="33.0" layoutY="447.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
+                <Label fx:id="jUserId" alignment="CENTER" layoutX="33.0" layoutY="236.0" prefHeight="18.0" prefWidth="236.0" style="-fx-text-fill: black;" text="0111231150" textFill="#e1e1e1" />
+                <Button fx:id="profileButton" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
+                <Button fx:id="matesButton" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToMates" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
+                <Button fx:id="searchButton" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
+                <Button fx:id="loginbutton" layoutX="27.0" layoutY="652.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
+            <Button fx:id="studyreqButton" layoutX="33.0" layoutY="447.0" mnemonicParsing="false" onAction="#switchToStudyrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
+            <Button fx:id="matesreqButtton" layoutX="31.0" layoutY="504.0" mnemonicParsing="false" onAction="#switchToMatesrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates Requests" />
+            <Button fx:id="homeButton" layoutX="1.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="64.0" prefWidth="290.0" stylesheets="@css/style.css">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/LogoMakr-97wQ95%20(3).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             </children>
         </AnchorPane>
         <AnchorPane layoutX="521.0" layoutY="34.0" prefHeight="647.0" prefWidth="236.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;">
@@ -46,11 +55,8 @@
                     <image>
                         <Image url="@Images/HighResGirl.jpg" />
                     </image>
-                    <effect>
-                        <BoxBlur />
-                    </effect>
                 </ImageView>
-                <Button layoutX="383.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #f68b20#f68b20; -fx-background-radius: 5;">
+                <Button fx:id="editButton" layoutX="383.0" layoutY="2.0" mnemonicParsing="false" onAction="#switchToEditProfile" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #f68b20#f68b20; -fx-background-radius: 5;">
                <textFill>
                   <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                      <stops>
@@ -74,13 +80,10 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-                <Label layoutX="14.0" layoutY="430.0" prefHeight="18.0" prefWidth="273.0" style="-fx-text-fill: black;" text="Amanda Clare">
+                <Label layoutX="44.0" layoutY="430.0" prefHeight="18.0" prefWidth="273.0" style="-fx-text-fill: black;" text="Amanda Clare">
                     <font>
                         <Font name="System Bold" size="27.0" />
                     </font>
-               <effect>
-                  <DropShadow />
-               </effect>
                 </Label>
                 <Label layoutX="14.0" layoutY="469.0" prefHeight="39.0" prefWidth="50.0" style="-fx-text-fill: black;">
                     <font>
@@ -89,23 +92,13 @@
                     <effect>
                         <DropShadow />
                     </effect>
-               <graphic>
-                  <ImageView fitHeight="36.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-square-clock-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
                 </Label>
-                <Label layoutX="39.0" layoutY="474.0" prefHeight="30.0" prefWidth="177.0" style="-fx-text-fill: #d91438;" text="3.00 PM - 5.00 PM">
+                <Label layoutX="79.0" layoutY="474.0" prefHeight="30.0" prefWidth="177.0" style="-fx-text-fill: #f68b20;" text="3.00 PM - 5.00 PM">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
-                    <effect>
-                        <DropShadow />
-                    </effect>
                 </Label>
-            <Label layoutX="15.0" layoutY="508.0" prefHeight="30.0" prefWidth="70.0" text="Dept:">
+            <Label layoutX="44.0" layoutY="508.0" prefHeight="30.0" prefWidth="101.0" text="Department:">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -113,8 +106,8 @@
                      </image>
                   </ImageView>
                </graphic></Label>
-            <Label layoutX="80.0" layoutY="511.0" text="Computer and Software Engineering" />
-            <Label layoutX="16.0" layoutY="538.0" style="-fx-text-fill: green;" text="Expertise:">
+            <Label layoutX="182.0" layoutY="515.0" text="Computer and Software Engineering" />
+            <Label layoutX="44.0" layoutY="538.0" style="-fx-text-fill: green;" text="Expertise:">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -122,8 +115,8 @@
                      </image>
                   </ImageView>
                </graphic></Label>
-            <Label layoutX="121.0" layoutY="538.0" text="SPL, Java, Calculus, DLD, Statistics" />
-            <Label layoutX="16.0" layoutY="563.0" text="Lives in Vatara, Dhaka">
+            <Label layoutX="183.0" layoutY="539.0" text="SPL, Java, Calculus, DLD, Statistics" />
+            <Label layoutX="43.0" layoutY="563.0" text="Lives in Vatara, Dhaka">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -131,7 +124,7 @@
                      </image>
                   </ImageView>
                </graphic></Label>
-            <Label layoutX="16.0" layoutY="588.0" style="-fx-text-fill: blue;" text=" Help required in:">
+            <Label layoutX="47.0" layoutY="585.0" style="-fx-text-fill: blue;" text=" Help required in:">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -140,7 +133,15 @@
                   </ImageView>
                </graphic>
             </Label>
-            <Text layoutX="173.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Structer, AI" />
+            <Text layoutX="183.0" layoutY="599.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Structer, AI">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></Text>
+            <ImageView fitHeight="36.0" fitWidth="16.0" layoutX="43.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Icons/icons8-square-clock-50.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </children>

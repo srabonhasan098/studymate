@@ -10,15 +10,13 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
-public class ProfilePageController {
+public class studyRequestSetupController {
+
 
     @FXML
-    public Button matesreqButtton;
-    @FXML
-    public Button editButton;
-    @FXML
-    private Button loginbutton, profileButton, matesButton, searchButton, studyreqButton, matesreqButton;
+    private Button loginbutton, profileButton, searchButton, matesButton, studyreqButton, matesreqButton;
 
     private Stage stage;
     private Scene scene;
@@ -27,7 +25,7 @@ public class ProfilePageController {
     /***
      switchToLoginPage is used to change a scene from another scene.
      Just copy the whole function (line 27 to 34) and change the function name and the location where you want to go.
-    ***/
+     ***/
     @FXML
     public void switchToLoginPage(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("login-page.fxml"));
@@ -37,7 +35,7 @@ public class ProfilePageController {
         stage.show();
     }
 
-    @FXML
+
     public void switchToProfile(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("profile-page.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -47,7 +45,7 @@ public class ProfilePageController {
     }
 
 
-    @FXML
+
     public void switchToMates(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("mates-page.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -57,7 +55,7 @@ public class ProfilePageController {
     }
 
 
-    @FXML
+
     public void switchToSearch(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("search-page.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -66,7 +64,7 @@ public class ProfilePageController {
         stage.show();
     }
 
-    @FXML
+
     public void switchToStudyrequest(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("study-request-page.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -75,33 +73,14 @@ public class ProfilePageController {
         stage.show();
     }
 
-    @FXML
+
     public void switchToMatesrequest(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("mates-request-working.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mates-request-working.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
-    @FXML
-    public void switchToEditProfile(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("edit-profile.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-    public void switchToHome(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("home-page.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
 
 
 }

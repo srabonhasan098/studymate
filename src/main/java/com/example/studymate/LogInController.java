@@ -24,6 +24,22 @@ public class LogInController {
 
     public TextField jStudentId, jPassword;
     public Button btnLogin;
+    public String UsersName;
+    public String studentID;
+
+    public String getUsersName() {
+        return UsersName;
+    }
+
+    public String getStudentID() {
+        return studentID;
+    }
+
+    public String getMailAddress() {
+        return mailAddress;
+    }
+
+    public String mailAddress;
 
 
     @FXML
@@ -59,10 +75,12 @@ public class LogInController {
             if (rs.next()) {
                 String user_id = rs.getString("id");
                 UserSession user = new UserSession(user_id);
+                UsersName = rs.getString("name");
+                studentID = rs.getString("id");
+                mailAddress = rs.getString("email");
                 showInfo("Success");
                 goToHomePage(event);
                 HomePageController c = new HomePageController();
-
 
             }else {
                 showError("User not found");
@@ -70,10 +88,6 @@ public class LogInController {
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
-
-
     }
 
 

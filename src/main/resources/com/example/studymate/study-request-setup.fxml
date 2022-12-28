@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%); -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%); -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.studyRequestSetupController">
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="289.0" style="-fx-background-color: #f68b20#f68b20;">
             <children>
@@ -29,12 +29,12 @@
                     </font>
                 </Label>
                 <Label fx:id="jUserId" layoutX="103.0" layoutY="236.0" style="-fx-text-fill: black;" text="0111231150" textFill="#e1e1e1" />
-                <Button fx:id="profileButton" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
-                <Button fx:id="matesButton" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
-                <Button fx:id="searchButton" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
+                <Button fx:id="profileButton" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
+                <Button fx:id="matesButton" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToMates" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
+                <Button fx:id="searchButton" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
                 <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
-            <Button fx:id="studyreqButton" layoutX="31.0" layoutY="445.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
-            <Button fx:id="matesreqButton" layoutX="33.0" layoutY="500.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates Requests" />
+            <Button fx:id="studyreqButton" layoutX="31.0" layoutY="445.0" mnemonicParsing="false" onAction="#switchToStudyrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
+            <Button fx:id="matesreqButton" layoutX="31.0" layoutY="496.0" mnemonicParsing="false" onAction="#switchToMatesrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates Requests" />
             <Button fx:id="homeButton" mnemonicParsing="false" onAction="#switchToHome" prefHeight="64.0" prefWidth="290.0" stylesheets="@css/style.css">
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">

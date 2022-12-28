@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%); -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%); -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.editProfileController">
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="289.0" style="-fx-background-color: #f68b20#f68b20;">
             <children>
@@ -22,27 +22,41 @@
                         </ImageView>
                     </children>
                 </Pane>
-                <Label fx:id="jUserName" layoutX="70.0" layoutY="201.0" style="-fx-text-fill: black;" text="Amanda Clare" textFill="WHITE">
+                <Label fx:id="jUserName" alignment="CENTER" layoutX="30.0" layoutY="201.0" prefHeight="35.0" prefWidth="236.0" style="-fx-text-fill: black;" text="Amanda Clare" textFill="WHITE">
                     <font>
-                        <Font size="24.0" />
+                        <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <Label fx:id="jUserId" layoutX="103.0" layoutY="236.0" style="-fx-text-fill: black;" text="0111231150" textFill="#e1e1e1" />
-                <Button layoutX="31.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
-                <Button layoutX="31.0" layoutY="339.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
-                <Button layoutX="31.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
-                <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
+                <Label fx:id="jUserId" alignment="CENTER" layoutX="33.0" layoutY="236.0" prefHeight="18.0" prefWidth="236.0" style="-fx-text-fill: black;" text="0111231150" textFill="#e1e1e1" />
+                <Button fx:id="profileButton" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="Profile" />
+                <Button fx:id="mateButton" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToMates" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
+                <Button fx:id="searchButton" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
+                <Button fx:id="loginbutton" layoutX="27.0" layoutY="652.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5;" text="Logout">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="studyreqButton" layoutX="31.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchToStudyrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Study Requests" />
+            <Button fx:id="matesreqButton" layoutX="31.0" layoutY="490.0" mnemonicParsing="false" onAction="#switchToMatesrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Mates Requests" />
+            <Button fx:id="homeButton" layoutX="-1.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="64.0" prefWidth="290.0" stylesheets="@css/style.css">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/LogoMakr-97wQ95%20(3).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             </children>
         </AnchorPane>
       <Pane layoutX="434.0" layoutY="87.0" prefHeight="558.0" prefWidth="586.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: #f68b20#f68b20; -fx-border-radius: 5; -fx-border-width: 3;">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="136.0" text="Edit Profile">
+            <Label layoutX="39.0" layoutY="34.0" prefHeight="35.0" prefWidth="136.0" text="Edit Profile">
                <font>
-                  <Font size="25.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
             <TextField layoutX="260.0" layoutY="92.0" prefHeight="37.0" prefWidth="299.0" promptText="Name" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
-            <TextField layoutX="260.0" layoutY="164.0" prefHeight="37.0" prefWidth="128.0" promptText="Start Time" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+            <TextField layoutX="260.0" layoutY="154.0" prefHeight="37.0" prefWidth="128.0" promptText="Start Time" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
             <ImageView fitHeight="192.0" fitWidth="180.0" layoutX="39.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/blank-profile-picture-geceafd724_1280.png" />
@@ -57,12 +71,12 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextField layoutX="431.0" layoutY="164.0" prefHeight="37.0" prefWidth="128.0" promptText="End Time" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
-            <TextField layoutX="260.0" layoutY="235.0" prefHeight="37.0" prefWidth="299.0" promptText="Department" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
-            <TextField layoutX="260.0" layoutY="310.0" prefHeight="37.0" prefWidth="299.0" promptText="Expertise" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
-            <TextField layoutX="260.0" layoutY="378.0" prefHeight="37.0" prefWidth="299.0" promptText="Lives in" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
-            <TextField layoutX="260.0" layoutY="452.0" prefHeight="37.0" prefWidth="299.0" promptText="Help required" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
-            <Button layoutX="452.0" layoutY="502.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #94D2BD;" text="Save">
+            <TextField layoutX="431.0" layoutY="154.0" prefHeight="37.0" prefWidth="128.0" promptText="End Time" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+            <TextField layoutX="260.0" layoutY="215.0" prefHeight="37.0" prefWidth="299.0" promptText="Department" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+            <TextField layoutX="260.0" layoutY="280.0" prefHeight="37.0" prefWidth="299.0" promptText="Expertise" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+            <TextField layoutX="260.0" layoutY="348.0" prefHeight="37.0" prefWidth="299.0" promptText="Lives in" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+            <TextField layoutX="260.0" layoutY="412.0" prefHeight="37.0" prefWidth="299.0" promptText="Help required" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+            <Button layoutX="452.0" layoutY="482.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #94D2BD;" text="Save">
                <graphic>
                   <ImageView fitHeight="19.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -71,7 +85,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="335.0" layoutY="502.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #F07167;" text="Cancel">
+            <Button layoutX="335.0" layoutY="482.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #F07167;" text="Cancel">
                <graphic>
                   <ImageView fitHeight="19.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>

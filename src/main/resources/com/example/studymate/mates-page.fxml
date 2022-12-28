@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%); -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%); -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.MatesPageController">
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="289.0" style="-fx-background-color: #f68b20#f68b20;">
             <children>
@@ -27,11 +27,21 @@
                     </font>
                 </Label>
                 <Label layoutX="103.0" layoutY="236.0" style="-fx-text-fill: black;" text="0111231150" textFill="#e1e1e1" />
-                <Button layoutX="31.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
-                <Button layoutX="31.0" layoutY="339.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
-                <Button layoutX="31.0" layoutY="392.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
-                <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
-            <Button layoutX="31.0" layoutY="445.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
+                <Button fx:id="profileButton" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
+                <Button fx:id="matesButton" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToMates" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
+                <Button fx:id="searchButton" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
+                <Button fx:id="loginbutton" layoutX="27.0" layoutY="652.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
+            <Button fx:id="studyreqButton" layoutX="31.0" layoutY="445.0" mnemonicParsing="false" onAction="#switchToStudyrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
+            <Button fx:id="studyreqButton1" layoutX="31.0" layoutY="497.0" mnemonicParsing="false" onAction="#switchToMatesrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates Requests" />
+            <Button fx:id="homeButton" layoutX="6.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="64.0" prefWidth="290.0" stylesheets="@css/style.css">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/LogoMakr-97wQ95%20(3).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             </children>
         </AnchorPane>
           <AnchorPane layoutX="336.0" layoutY="50.0" prefHeight="108.0" prefWidth="837.0" style="-fx-background-color: #f68b20#f68b20; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;">
@@ -74,22 +84,23 @@
                           <Font name="System Bold" size="19.0" />
                       </font>
                   </Label>
-            <Button layoutX="505.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Setup a meeting">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="705.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #f2531c;" text="Remove">
+
+            <Button layoutX="614.0" layoutY="37.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #f2531c;" text="Remove">
                <graphic>
                         <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@Icons/icons8-unfriend-50.png" />
                             </image>
                         </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="406.0" layoutY="37.0" mnemonicParsing="false" onAction="#switchToStudSetup" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #DAF7A6;" text="Setup for Study">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
+                     </image>
+                  </ImageView>
                </graphic>
             </Button>
               </children>
@@ -134,20 +145,20 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Button layoutX="505.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Setup a meeting">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="705.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #f2531c;" text="Remove">
+            <Button layoutX="614.0" layoutY="36.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #f2531c;" text="Remove">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icons/icons8-unfriend-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="406.0" layoutY="36.0" mnemonicParsing="false" onAction="#switchToStudSetup" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #DAF7A6;" text="Setup for Study">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -194,20 +205,20 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Button layoutX="505.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Setup a meeting">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="705.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #f2531c;" text="Remove">
+            <Button layoutX="613.0" layoutY="36.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #f2531c;" text="Remove">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icons/icons8-unfriend-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="405.0" layoutY="36.0" mnemonicParsing="false" onAction="#switchToStudSetup" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #DAF7A6;" text="Setup for Study">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -254,20 +265,20 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Button layoutX="505.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Setup a meeting">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="705.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #f2531c;" text="Remove">
+            <Button layoutX="614.0" layoutY="37.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #f2531c;" text="Remove">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icons/icons8-unfriend-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="406.0" layoutY="37.0" mnemonicParsing="false" onAction="#switchToStudSetup" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #DAF7A6;" text="Setup for Study">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -314,20 +325,20 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Button layoutX="505.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #DAF7A6;" text="Setup a meeting">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="705.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #f2531c;" text="Remove">
+            <Button layoutX="611.0" layoutY="36.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #f2531c;" text="Remove">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icons/icons8-unfriend-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="403.0" layoutY="36.0" mnemonicParsing="false" onAction="#switchToStudSetup" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #DAF7A6;" text="Setup for Study">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/icons8-appointment-scheduling-50.png" />
                      </image>
                   </ImageView>
                </graphic>

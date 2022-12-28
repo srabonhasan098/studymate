@@ -20,6 +20,8 @@ import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 import Utility.UserSession;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class HomePageController implements Initializable{
@@ -28,14 +30,53 @@ public class HomePageController implements Initializable{
     public Label jUserName,jUserId,titleName;
     @FXML
     public Button btnProfile;
+    public Button btnMates;
+    public Button btnSearch;
+    public Button btnLogout;
+    public Button btnSkip;
+    public ImageView studentIMG = new ImageView();
+    public Label expertiseinfo;
 
     Connection con = null;
     PreparedStatement ps = null;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        showUserdata();
-        showOtherUser();
+//        showUserdata();
+//        showOtherUser();
+        jUserId.setText(showUserdata1("student_id"));
+        jUserName.setText(showUserdata1("name"));
+        skipUsers();
+
+        return null;
+    }
+
+    private void skipUsers() {
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studymate", "root", "");
+
+            String user_id = UserSession.getUser_id();
+
+            String sql = "SELECT * FROM user WHERE id != "+ user_id+" ORDER BY RAND() LIMIT 1";
+            ps = con.prepareStatement(sql);
+
+            ResultSet rs=ps.executeQuery();
+
+            if(rs.next())
+            {
+                String name = rs.getString("name");
+                String img = rs.getString("imageurl");
+                expertiseinfo.setText("Expertise: "+rs.getString("expertise"));
+                studentIMG.setImage(new Image(img));
+                System.out.println(name);
+                titleName.setText(name);
+            }else{
+                showError("Sorry...Something is not right in showOtherUser");
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 
     public void showUserdata() {
@@ -59,7 +100,7 @@ public class HomePageController implements Initializable{
                 jUserName.setText(name);
                 jUserId.setText(id);
             }else{
-                showError("Sorry...Something is not righ in showUserData");
+                showError("Sorry...Something is not right in showUserData");
             }
 
         }catch (Exception e){
@@ -95,30 +136,7 @@ public class HomePageController implements Initializable{
     }
 
     public void skipUser(ActionEvent event) throws Exception{
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studymate", "root", "");
-
-            String user_id = UserSession.getUser_id();
-
-            String sql = "SELECT * FROM user WHERE id != "+ user_id+" ORDER BY RAND() LIMIT 1";
-            ps = con.prepareStatement(sql);
-
-            ResultSet rs=ps.executeQuery();
-
-            if(rs.next())
-            {
-                String name = rs.getString("name");
-                System.out.println(name);
-                titleName.setText(name);
-
-            }else{
-                showError("Sorry...Something is not right in showOtherUser");
-            }
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        skipUsers();
     }
 
     public void showError(String msg){
@@ -170,4 +188,57 @@ public class HomePageController implements Initializable{
         appStage.setScene(signupScene);
         appStage.show();
     }
+
+
+    public void goToBtnStudyReq(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("study-request-page.fxml"));
+        Scene signupScene = new Scene(parent);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(signupScene);
+        appStage.show();
+    }
+
+
+    public void goToBtnMatesReq(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("mates-request-working.fxml"));
+        Scene signupScene = new Scene(parent);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(signupScene);
+        appStage.show();
+    }
+
+    public void goToHomePage(ActionEvent event) throws IOException{
+        Parent parent = FXMLLoader.load(getClass().getResource("home-page.fxml"));
+        Scene signupScene = new Scene(parent);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(signupScene);
+        appStage.show();
+    }
+
+    public String showUserdata1(String column) {
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studymate", "root", "");
+
+            String user_id = UserSession.getUser_id();
+
+            String sql = "Select * from user where id="+user_id;
+            ps = con.prepareStatement(sql);
+
+            ResultSet rs=ps.executeQuery();
+
+            if(rs.next())
+            {
+                return rs.getString(column);
+            }else{
+                showError("Sorry...Something is not right in showUserData");
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
 }
