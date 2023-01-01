@@ -26,5 +26,6 @@
       <Label layoutX="779.0" layoutY="503.0" prefHeight="27.0" prefWidth="173.0" text="Don't have an account!!!" />
       <PasswordField fx:id="jPassword" layoutX="772.0" layoutY="341.0" prefHeight="39.0" prefWidth="301.0" promptText="Password" style="-fx-border-color: #f68b1e;" />
       <Button fx:id="signButton" layoutX="963.0" layoutY="499.0" mnemonicParsing="false" onAction="#setSignupButtonClick" style="-fx-background-color: #2d2a87; -fx-text-fill: #fff;" text="Sign Up" />
+      <Button layoutX="897.0" layoutY="467.0" mnemonicParsing="false" onAction="#newchat" text="Button" />
    </children>
 </Pane>

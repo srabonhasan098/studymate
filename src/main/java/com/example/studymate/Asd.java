@@ -24,6 +24,5 @@ public class Asd implements Initializable {
             throw new RuntimeException(e);
         }
         asdasd.getChildren().add(newLoadedPane);
-        return null;
     }
 }

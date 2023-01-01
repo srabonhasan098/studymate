@@ -3,40 +3,27 @@ package com.example.studymate;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class SearchPageController implements Initializable {
+public class SearchPageController {
 
 
     @FXML
     private Button loginbutton, profileButton, searchButton, matesButton, studyreqButton, matesreqButton;
+
     @FXML
-    private VBox searchLayout;
+    private TextField searchMate;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        return null;
-    }
-
-
-
-
-
-
 
     /***
      switchToLoginPage is used to change a scene from another scene.
@@ -108,5 +95,27 @@ public class SearchPageController implements Initializable {
         stage.show();
     }
 
+    public void search(ActionEvent event) throws IOException{
+        if(searchMate.getText().equals("Johan")){
+            root = FXMLLoader.load(getClass().getResource("search-johan.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else if(searchMate.getText().equals("Anna")){
+            root = FXMLLoader.load(getClass().getResource("search-anna.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else if(searchMate.getText().equals("Mike")){
+            root = FXMLLoader.load(getClass().getResource("search-mike.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+
+    }
 
 }

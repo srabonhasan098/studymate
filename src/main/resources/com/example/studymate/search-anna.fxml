@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%); -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.SearchPageController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="289.0" style="-fx-background-color: #f68b20#f68b20;">
+         <children>
+            <Pane layoutX="33.0" layoutY="62.0" prefHeight="200.0" prefWidth="236.0" style="-fx-background-color: white; -fx-shape-radius: 5; -fx-background-radius: 5;">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="111.0" layoutX="71.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-content-radius: 5;">
+                     <image>
+                        <Image url="@Images/Erwin.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="56.0" layoutY="139.0" style="-fx-text-fill: black;" text="Erwin Smith" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="176.0" style="-fx-text-fill: black;" text="011191150" textFill="#e1e1e1" />
+               </children>
+            </Pane>
+            <Button fx:id="profileButton" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
+            <Button fx:id="matesButton" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToMates" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
+            <Button fx:id="searchButton" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
+            <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
+            <Button fx:id="studyreqButton" layoutX="31.0" layoutY="445.0" mnemonicParsing="false" onAction="#switchToStudyrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
+            <Button fx:id="studyreqButton1" layoutX="31.0" layoutY="496.0" mnemonicParsing="false" onAction="#switchToMatesrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates Requests" />
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#switchToHome" prefHeight="64.0" prefWidth="290.0" stylesheets="@css/style.css">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/LogoMakr.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="442.0" layoutY="83.0" prefHeight="108.0" prefWidth="598.0" style="-fx-background-color: f68b20; -fx-background-radius: 5;">
+         <children>
+            <AnchorPane layoutX="7.0" layoutY="41.0" prefHeight="56.0" prefWidth="585.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;">
+               <children>
+                  <Label layoutX="77.0" layoutY="9.0" prefHeight="25.0" prefWidth="179.0" text="Anna Liebert" textFill="#363535">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="256.0" layoutY="6.0" text="Expertise: Physics, Electronics" textFill="#806d6d">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/icons8-expertise-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="256.0" layoutY="29.0" text="4 PM - 6 PM" textFill="#806d6d">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/icons8-square-clock-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="8.0" layoutY="4.0" prefHeight="48.0" prefWidth="56.0" style="-fx-background-color: black; -fx-background-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="42.0" fitWidth="56.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Anna_Libert.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button layoutX="514.0" layoutY="8.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="50.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/icons8-add-friend-58.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="7.0" layoutY="2.0" prefHeight="25.0" prefWidth="149.0" text="Search Results">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="435.0" layoutY="14.0" prefHeight="56.0" prefWidth="611.0" style="-fx-background-color: #f68b20#f68b20; -fx-background-radius: 5;">
+         <children>
+            <TextField layoutX="50.0" layoutY="7.0" prefHeight="42.0" prefWidth="514.0" promptText="             Search for mate!" text="Anna" />
+            <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="44.0" style="-fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/icons8-search-more-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="481.0" layoutY="15.0" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: f68b20;" text="search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

@@ -99,4 +99,42 @@ public class MatesPageController {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToStudSetup_1(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("studey-request-setup-1.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToStudSetup_2(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("studey-request-setup-2.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToStudSetup_3(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("studey-request-setup-3.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToStudSetup_4(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("studey-request-setup-4.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToStudSetup_5(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("studey-request-setup-5.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

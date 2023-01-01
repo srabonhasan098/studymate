@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #ffffff00 0.0%, #ffffff 100.0%); -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studymate.studyRequestSetupController">
+    <children>
+        <AnchorPane prefHeight="720.0" prefWidth="289.0" style="-fx-background-color: #f68b20#f68b20;">
+            <children>
+                <Pane layoutX="33.0" layoutY="62.0" prefHeight="200.0" prefWidth="236.0" style="-fx-background-color: white; -fx-shape-radius: 5; -fx-background-radius: 5;">
+                    <children>
+                        <ImageView fitHeight="125.0" fitWidth="111.0" layoutX="71.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-content-radius: 5;">
+                            <image>
+                                <Image url="@Images/Erwin.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="jUserName" alignment="CENTER" layoutX="56.0" layoutY="139.0" style="-fx-text-fill: black;" text="Erwin Smith" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="jUserId" layoutX="81.0" layoutY="173.0" style="-fx-text-fill: black;" text="011191150" textFill="#e1e1e1" />
+                    </children>
+                </Pane>
+                <Button fx:id="profileButton" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
+                <Button fx:id="matesButton" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToMates" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
+                <Button fx:id="searchButton" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
+                <Button layoutX="27.0" layoutY="652.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #f2531c; -fx-background-radius: 5;" text="Logout" />
+                <Button fx:id="studyreqButton" layoutX="31.0" layoutY="445.0" mnemonicParsing="false" onAction="#switchToStudyrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Study Requests" />
+                <Button fx:id="matesreqButton" layoutX="33.0" layoutY="500.0" mnemonicParsing="false" onAction="#switchToMatesrequest" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates Requests" />
+                <Button fx:id="homeButton" mnemonicParsing="false" onAction="#switchToHome" prefHeight="64.0" prefWidth="290.0" stylesheets="@css/style.css">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="63.0" onDragDetected="#switchToHome" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Icons/LogoMakr.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Pane layoutX="434.0" layoutY="87.0" prefHeight="558.0" prefWidth="586.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: #f68b20#f68b20; -fx-border-radius: 5; -fx-border-width: 3;">
+            <children>
+                <ImageView fitHeight="137.0" fitWidth="162.0" layoutX="49.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/Erwin.jpg" />
+                    </image>
+                </ImageView>
+                <TextField layoutX="157.0" layoutY="272.0" prefHeight="37.0" prefWidth="115.0" promptText="Start Time" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+                <TextField layoutX="157.0" layoutY="318.0" prefHeight="37.0" prefWidth="299.0" promptText="Place" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+                <TextField layoutX="157.0" layoutY="367.0" prefHeight="37.0" prefWidth="299.0" promptText="Topic" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+                <Button layoutX="452.0" layoutY="502.0" mnemonicParsing="false" onAction="#switchToMates" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #94D2BD;" text="Request">
+                    <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Icons/icons8-meeting-time-24.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button layoutX="335.0" layoutY="502.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #F07167;" text="Cancel">
+                    <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Icons/icons8-close-24.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label layoutX="149.0" layoutY="26.0" prefHeight="38.0" prefWidth="289.0" text="Create Meeting Request">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="137.0" fitWidth="162.0" layoutX="410.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/Mikasa Ackerman.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="87.0" layoutY="229.0" text="Rifat" />
+                <Label layoutX="424.0" layoutY="229.0" text="Mikasa Ackerman" />
+                <TextField layoutX="341.0" layoutY="272.0" prefHeight="37.0" prefWidth="115.0" promptText="End Time" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+                <Label layoutX="205.0" layoutY="131.0" prefHeight="30.0" prefWidth="177.0" style="-fx-text-fill: #d91438;" text="4.00 PM - 6.00 PM">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+                <TextField layoutX="157.0" layoutY="416.0" prefHeight="37.0" prefWidth="299.0" promptText="Phone no" style="-fx-border-color: #f68b20#f68b20; -fx-border-radius: 5;" />
+            </children>
+        </Pane>
+    </children>
+</Pane>

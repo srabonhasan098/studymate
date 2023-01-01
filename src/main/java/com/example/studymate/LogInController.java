@@ -126,4 +126,17 @@ public class LogInController {
         appStage.setScene(signupScene);
         appStage.show();
     }
+    public void newchat(ActionEvent event) throws IOException{
+        Parent parent = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Scene signupScene = new Scene(parent);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(signupScene);
+        appStage.show();
+
+
+    }
+
+
+    public void buttonclick(ActionEvent event) {
+    }
 }

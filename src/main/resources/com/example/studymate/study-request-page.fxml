@@ -16,17 +16,17 @@
           <children>
             <ImageView fitHeight="125.0" fitWidth="111.0" layoutX="71.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-content-radius: 5;">
               <image>
-                <Image url="@Images/HighResGirl.jpg" />
+                <Image url="@Images/Erwin.jpg" />
               </image>
             </ImageView>
+              <Label layoutX="55.0" layoutY="139.0" style="-fx-text-fill: black;" text="Erwin Smith" textFill="WHITE">
+                <font>
+                  <Font size="24.0" />
+                </font>
+              </Label>
+              <Label layoutX="81.0" layoutY="175.0" style="-fx-text-fill: black;" text="011191150" textFill="#e1e1e1" />
           </children>
         </Pane>
-        <Label layoutX="70.0" layoutY="201.0" style="-fx-text-fill: black;" text="Amanda Clare" textFill="WHITE">
-          <font>
-            <Font size="24.0" />
-          </font>
-        </Label>
-        <Label layoutX="103.0" layoutY="236.0" style="-fx-text-fill: black;" text="0111231150" textFill="#e1e1e1" />
         <Button fx:id="profileButton" layoutX="31.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-text-fill: Black; -fx-background-radius: 5;" text="My Profile" />
         <Button fx:id="matesButton" layoutX="31.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToMates" prefHeight="30.0" prefWidth="236.0" style="-fx-text-fill: black; -fx-background-color: white; -fx-background-radius: 5;" text="Mates" />
         <Button fx:id="searchButton" layoutX="31.0" layoutY="392.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="30.0" prefWidth="236.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;" text="Search" />
@@ -37,7 +37,7 @@
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Icons/LogoMakr-97wQ95%20(3).png" />
+                        <Image url="@Icons/LogoMakr.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -51,7 +51,7 @@
             <Font size="13.0" />
           </font>
         </Label>
-        <Label layoutX="130.0" layoutY="27.0" prefHeight="28.0" prefWidth="140.0" text="Marlyn Manore" textFill="#363535">
+        <Label layoutX="130.0" layoutY="27.0" prefHeight="28.0" prefWidth="140.0" text="Levi Ackerman" textFill="#363535">
           <font>
             <Font name="System Bold" size="19.0" />
           </font>
@@ -74,9 +74,9 @@
             </ImageView>
           </graphic>
         </Button>
-      <ImageView fitHeight="88.0" fitWidth="104.0" layoutX="27.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="88.0" fitWidth="104.0" layoutX="31.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
         <image>
-          <Image url="@Images/blank-profile-picture-geceafd724_1280.png" />
+          <Image url="@Images/Alvi.jpg" />
         </image>
       </ImageView>
             <Label layoutX="153.0" layoutY="84.0" prefHeight="19.0" prefWidth="126.0" text="University Library" textFill="#806d6d">
@@ -105,145 +105,17 @@
                </image>
             </ImageView>
             <Label layoutX="27.0" layoutY="136.0" text="Topic :" />
-            <Label layoutX="91.0" layoutY="136.0" prefHeight="25.0" prefWidth="181.0" text="Java" />
+            <Label layoutX="91.0" layoutY="136.0" prefHeight="25.0" prefWidth="181.0" text="Statistics" />
       </children>
     </AnchorPane>
-      <AnchorPane layoutX="757.0" layoutY="373.0" prefHeight="272.0" prefWidth="273.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: orange; -fx-border-radius: 5; -fx-border-width: 2;">
-         <children>
-            <Label layoutX="153.0" layoutY="62.0" text="4 PM - 6 PM" textFill="#806d6d">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="130.0" layoutY="27.0" prefHeight="28.0" prefWidth="140.0" text="Marlyn Manore" textFill="#363535">
-               <font>
-                  <Font name="System Bold" size="19.0" />
-               </font>
-            </Label>
-            <Button layoutX="140.0" layoutY="214.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #DAF7A6;" text="Approve">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-thumbs-up-30.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="16.0" layoutY="214.0" mnemonicParsing="false" style="-fx-background-color: #f2531c;" text="Reject">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-close-24.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <ImageView fitHeight="88.0" fitWidth="104.0" layoutX="27.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Images/blank-profile-picture-geceafd724_1280.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="153.0" layoutY="84.0" prefHeight="19.0" prefWidth="126.0" text="University Library" textFill="#806d6d">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="132.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/icons8-navigation-50.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="132.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/icons8-square-clock-50.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="153.0" layoutY="109.0" prefHeight="19.0" prefWidth="126.0" text="1234" textFill="#806d6d">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="132.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/icons8-iphone-se-30.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="27.0" layoutY="136.0" text="Topic :" />
-            <Label layoutX="91.0" layoutY="136.0" prefHeight="25.0" prefWidth="181.0" text="Java" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="402.0" layoutY="373.0" prefHeight="272.0" prefWidth="289.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: orange; -fx-border-radius: 5; -fx-border-width: 2;">
-         <children>
-            <Label layoutX="153.0" layoutY="62.0" text="4 PM - 6 PM" textFill="#806d6d">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="130.0" layoutY="27.0" prefHeight="28.0" prefWidth="140.0" text="Marlyn Manore" textFill="#363535">
-               <font>
-                  <Font name="System Bold" size="19.0" />
-               </font>
-            </Label>
-            <Button layoutX="140.0" layoutY="214.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #DAF7A6;" text="Approve">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-thumbs-up-30.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="16.0" layoutY="214.0" mnemonicParsing="false" style="-fx-background-color: #f2531c;" text="Reject">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icons/icons8-close-24.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <ImageView fitHeight="88.0" fitWidth="104.0" layoutX="27.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Images/blank-profile-picture-geceafd724_1280.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="153.0" layoutY="84.0" prefHeight="19.0" prefWidth="126.0" text="University Library" textFill="#806d6d">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="132.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/icons8-navigation-50.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="132.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/icons8-square-clock-50.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="153.0" layoutY="109.0" prefHeight="19.0" prefWidth="126.0" text="1234" textFill="#806d6d">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="132.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Icons/icons8-iphone-se-30.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="27.0" layoutY="136.0" text="Topic :" />
-            <Label layoutX="91.0" layoutY="136.0" prefHeight="25.0" prefWidth="181.0" text="Java" />
-         </children>
-      </AnchorPane>
       <AnchorPane layoutX="757.0" layoutY="51.0" prefHeight="272.0" prefWidth="270.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: orange; -fx-border-radius: 5; -fx-border-width: 2;">
          <children>
-            <Label layoutX="153.0" layoutY="62.0" text="4 PM - 6 PM" textFill="#806d6d">
+            <Label layoutX="153.0" layoutY="62.0" text="6 PM - 8 PM" textFill="#806d6d">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label layoutX="130.0" layoutY="27.0" prefHeight="28.0" prefWidth="140.0" text="Marlyn Manore" textFill="#363535">
+            <Label layoutX="130.0" layoutY="27.0" prefHeight="28.0" prefWidth="140.0" text="Ymir Fritz" textFill="#363535">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
@@ -268,7 +140,7 @@
             </Button>
             <ImageView fitHeight="88.0" fitWidth="104.0" layoutX="27.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Images/blank-profile-picture-geceafd724_1280.png" />
+                  <Image url="@Images/Ymir.jpeg" />
                </image>
             </ImageView>
             <Label layoutX="153.0" layoutY="84.0" prefHeight="19.0" prefWidth="126.0" text="University Library" textFill="#806d6d">
@@ -297,7 +169,7 @@
                </image>
             </ImageView>
             <Label layoutX="27.0" layoutY="136.0" text="Topic :" />
-            <Label layoutX="91.0" layoutY="136.0" prefHeight="25.0" prefWidth="181.0" text="Java" />
+            <Label layoutX="91.0" layoutY="136.0" prefHeight="25.0" prefWidth="181.0" text="Statistics" />
          </children>
       </AnchorPane>
   </children>

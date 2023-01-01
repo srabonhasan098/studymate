@@ -91,4 +91,36 @@ public class MatesRequestsPageController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void switchToMates2(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("mates-page-2.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToMatesNaoto(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("mates-page-naoto.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToReqRemoveMike(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("mates-requests-remove-mike.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToReqRemoveHinata(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("mates-requests-remove-hinata.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

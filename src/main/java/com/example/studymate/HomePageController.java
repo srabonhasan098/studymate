@@ -48,7 +48,6 @@ public class HomePageController implements Initializable{
         jUserName.setText(showUserdata1("name"));
         skipUsers();
 
-        return null;
     }
 
     private void skipUsers() {
@@ -206,6 +205,13 @@ public class HomePageController implements Initializable{
         appStage.setScene(signupScene);
         appStage.show();
     }
+    public void chat(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Scene signupScene = new Scene(parent);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(signupScene);
+        appStage.show();
+    }
 
     public void goToHomePage(ActionEvent event) throws IOException{
         Parent parent = FXMLLoader.load(getClass().getResource("home-page.fxml"));
@@ -241,4 +247,6 @@ public class HomePageController implements Initializable{
     }
 
 
+    public void buttonclick(ActionEvent event) {
+    }
 }
